@@ -1,7 +1,10 @@
 # AmbientSpec
 
-AmbientSpec turns your RSpec specs into ambient music. Sweet sounds come from
+AmbientSpec turns your long-running RSpec specs into ambient music. Sweet sounds come from
 passing examples, and gongs signal failing tests.
+
+(Note that you won't hear anything unless your test suite run is longer than 5 seconds. Silence is
+the most pleasing sound of all.)
 
 ## Installation
 
