@@ -6,6 +6,10 @@ passing examples, and gongs signal failing tests.
 (Note that you won't hear anything unless your test suite run is longer than 5 seconds. Silence is
 the most pleasing sound of all.)
 
+## Dependencies
+
+Requires RSpec 3.x.
+
 ## Installation
 
 Add this line to your application's Gemfile:
