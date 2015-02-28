@@ -19,9 +19,9 @@ module AmbientSpec
     end
 
     def minitest
-      ::MiniTest::Spec.after :each do |example|
+      ::Minitest::Spec.after :each do |example|
         player = AmbientSpec::Player.new 
-        flag = (example.result_code == "E" || example.result_code == "F") ? :fail : :pass
+        flag = !example.passed? ? :fail : :pass
         player.sing(flag)
       end    
     end
