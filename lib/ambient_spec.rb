@@ -1,7 +1,5 @@
-if defined?(Rspec)
+if defined?(RSpec)
   require "rspec/core"
-else
-  require "minitest/unit"
 end
 
 require "ambient_spec/version"
