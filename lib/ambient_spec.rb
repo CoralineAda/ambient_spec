@@ -10,7 +10,7 @@ require "ambient_spec/configure"
 
 module AmbientSpec
 
-  unless ENV['AMBIENT_SPEC_DISABLE']
+  unless ENV['AMBIENT_SPEC_DISABLED']
 
     if defined?(RSpec)
       AmbientSpec::Configure.new.rspec
