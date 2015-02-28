@@ -1,5 +1,7 @@
 if defined?(RSpec)
   require "rspec/core"
+else
+  require "minitest/spec"
 end
 
 module AmbientSpec
@@ -14,6 +16,14 @@ module AmbientSpec
           player.sing(flag)
         end
       end
+    end
+
+    def minitest
+      ::MiniTest::Spec.after :each do |example|
+        player = AmbientSpec::Player.new 
+        flag = (example.result_code == "E" || example.result_code == "F") ? :fail : :pass
+        player.sing(flag)
+      end    
     end
 
   end
