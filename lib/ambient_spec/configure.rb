@@ -1,7 +1,5 @@
 if defined?(RSpec)
   require "rspec/core"
-else
-  require "minitest/test"
 end
 
 module AmbientSpec
@@ -17,14 +15,6 @@ module AmbientSpec
         end
       end
     end
-
-#    def minitest
-#      ::Minitest::Test.after_teardown :each do |example|
-#        player = AmbientSpec::Player.new 
-#        flag = !example.passed? ? :fail : :pass
-#        player.sing(flag)
-#      end    
-#    end
 
   end
 
