@@ -19,7 +19,7 @@ module AmbientSpec
     end
 
     def minitest
-      ::Minitest::Spec.after :each do |example|
+      ::Minitest::Test.after_teardown :each do |example|
         player = AmbientSpec::Player.new 
         flag = !example.passed? ? :fail : :pass
         player.sing(flag)
