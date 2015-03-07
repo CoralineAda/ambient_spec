@@ -14,8 +14,8 @@ module AmbientSpec
 
     if defined?(RSpec)
       AmbientSpec::Configure.new.rspec
-    else
-      AmbientSpec::Configure.new.minitest
+#    else
+#      AmbientSpec::Configure.new.minitest
     end
 
   end
