@@ -7,6 +7,8 @@ end
 class AmbientReporter < Minitest::Reporter
   def record result
     player = AmbientSpec::Player.new
-    player.sing(result)
+    unless ENV['AMBIENT_SPEC_DISABLED']
+      player.sing(result)
+    end
   end
 end
