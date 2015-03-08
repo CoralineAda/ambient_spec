@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["coraline@idolhands.com"]
   spec.summary       = %q{Creates an ambient soundscape for your test suite.}
   spec.description   = %q{}
-  spec.homepage      = "https://github.com/Bantik/ambient_spec"
+  spec.homepage      = "https://github.com/CoralineAda/ambient_spec"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
