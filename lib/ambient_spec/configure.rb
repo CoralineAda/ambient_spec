@@ -1,4 +1,6 @@
-require "rspec/core"
+if defined?(RSpec)
+  require "rspec/core"
+end
 
 module AmbientSpec
 

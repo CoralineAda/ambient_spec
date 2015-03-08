@@ -1,6 +1,6 @@
 # AmbientSpec
 
-AmbientSpec turns your long-running RSpec specs into ambient music. Sweet sounds come from
+AmbientSpec turns your long-running RSpec or Minitest specs into ambient music. Sweet sounds come from
 passing examples, and gongs signal failing tests.
 
 (Note that you won't hear anything unless your test suite run is longer than 5 seconds. Silence is
@@ -8,7 +8,7 @@ the most pleasing sound of all.)
 
 ## Dependencies
 
-Requires RSpec 3.x.
+Requires RSpec 3.x. or Minitest.
 
 ## Installation
 
@@ -26,7 +26,7 @@ Or install it yourself as:
 
 ## Usage
 
-Simply run rspec as you normally would.
+Simply run your tests as you normally would.
 
 To disable AmbientSpec, set `ENV['AMBIENT_SPEC_DISABLED']=true`
 

@@ -22,4 +22,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake"
   spec.add_dependency "wavefile", "=0.6.0"
 
+  spec.add_dependency "minitest"
+
 end
