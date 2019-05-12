@@ -1,14 +1,10 @@
 # AmbientSpec
 
-AmbientSpec turns your long-running RSpec or Minitest specs into ambient music. Sweet sounds come from
-passing examples, and gongs signal failing tests.
-
-(Note that you won't hear anything unless your test suite run is longer than 5 seconds. Silence is
-the most pleasing sound of all.)
+AmbientSpec turns your RSpec specs into ambient music. Sweet sounds come from passing examples, and a gong signals a failing spec.
 
 ## Dependencies
 
-Requires RSpec 3.x. or Minitest.
+Requires RSpec 3.x and only runs on Mac OS (sorry!)
 
 ## Installation
 
@@ -20,22 +16,24 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
+## Command-line Usage
 
-    $ gem install ambient_spec
+For documentation-style formatting:
 
-## Usage
+    rspec -r ambient_spec -f AmbientDocumentationFormatter spec/
 
-Simply run your tests as you normally would.
+For progress-style formatting:
 
-To disable AmbientSpec, set `ENV['AMBIENT_SPEC_DISABLED']=true`
+    rspec -r ambient_spec -f AmbientProgressFormatter spec/
+
+Or best of all, in your `.rspec` file in your project root:
+
+```
+--require spec_helper
+--require ambient_spec
+--format AmbientDocumentationFormatter
+```
 
 ## Contributing
 
-Please note that this project is released with a [Contributor Code of Conduct](https://raw.githubusercontent.com/Bantik/ambient_spec/master/CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+Please note that this project adheres to the [Contributor Covenant Code of Conduct](https://raw.githubusercontent.com/CoralineAda/ambient_spec/master/CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
