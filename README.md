@@ -1,6 +1,6 @@
 # AmbientSpec
 
-AmbientSpec turns your RSpec specs into ambient music. Sweet sounds come from passing examples, and a gong signals a failing spec.
+AmbientSpec turns your RSpec suite into soothing, ambient music. Harmonious sounds come from passing examples, and a gong signals a failing spec.
 
 ## Dependencies
 
