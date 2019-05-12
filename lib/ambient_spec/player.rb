@@ -5,12 +5,7 @@ module AmbientSpec
   class Player
 
     FIFTHS = %w{c g d a e b f}.freeze
-#    PATCHES = %w{breathy dark ghost harp piano plasma swirl waves}.freeze
-    PATCHES = %w{piano harp}.freeze
-
-    def initialize
-      @last_played_at = Time.now
-    end
+    PATCHES = %w{breathy dark ghost harp piano plasma swirl waves}.freeze
 
     def sing(status=:pass)
       if status == :pass
@@ -21,14 +16,13 @@ module AmbientSpec
         increment_timer
       else
         system("afplay #{path_to_files}/failure/failure.wav &>/dev/null &")
-        increment_timer
       end
     end
 
     private
 
     def should_play?
-      Time.now - @last_played_at > 2
+      @last_played_at.nil? || Time.now - @last_played_at > 1
     end
 
     def increment_timer
