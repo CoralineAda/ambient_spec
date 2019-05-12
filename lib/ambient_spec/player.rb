@@ -12,14 +12,14 @@ module AmbientSpec
 
     def sing(status=:pass)
       increment_counter
-      return unless counter % 10 == 1 || status == :fail
+#      return unless counter % 3 == 1 || status == :fail
       if status == :pass
-        folder = ["rain", "rain", "rain_2", "drip"].sample
+        folder = %w{breathy dark ghost harp piano plasma swirl waves}.sample
+        filename = fifths.sample
+        system("afplay #{path_to_files}/#{folder}/#{filename}.wav &>/dev/null &")
       else
-        folder = "gong"
+        system("afplay #{path_to_files}/failure/failure.wav &>/dev/null &")
       end
-      filename = fifths.sample
-      system("afplay #{path_to_files}/#{folder}/#{filename}.wav &")
     end
 
     def increment_counter
